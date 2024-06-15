@@ -8,7 +8,7 @@ FROM
     orders
 --Join to combine tables    
 JOIN 
-    customers ON orders.customer_id = customers.customer_id
+    customers ON customers.customer_id = orders.customer_id
 JOIN 
     subscriptions ON orders.subscription_id = subscriptions.subscription_id
 WHERE 
