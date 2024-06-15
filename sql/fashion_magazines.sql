@@ -3,7 +3,7 @@
 
 SELECT
     customers.customer_name AS Customer,
-    PRINTF('$%.2f', SUM(subscriptions.price * subscriptions.subscription_length)) AS "Amount Due" --had to use internet search here
+    PRINTF('$%.2f', SUM(s.price_per_month * s.subscription_length)) AS "Amount Due" --had to use internet search here
 FROM 
     orders
 --Join to combine tables    
