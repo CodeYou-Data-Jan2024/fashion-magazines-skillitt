@@ -1,6 +1,3 @@
-
---Insert code here
-
 SELECT
 <<<<<<< HEAD
     customers.customer_name AS 'Customer',
