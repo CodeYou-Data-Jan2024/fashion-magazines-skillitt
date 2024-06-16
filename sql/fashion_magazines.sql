@@ -2,10 +2,10 @@
 --Insert code here
 
 SELECT
-    customers.customer_name AS Customer,
-    "$" || PRINTF('$%.2f', SUM(subscriptions.subscription_length * subscriptions.price_per_month)) AS "Amount Due" --had to use internet search here
+    customers.customer_name AS 'Customer',
+     PRINTF('$%.2f', SUM(subscriptions.subscription_length * subscriptions.price_per_month)) AS "Amount Due" --had to use internet search here
 FROM 
-    orders
+    orders 
 --Join to combine tables    
 JOIN 
     customers ON customers.customer_id = orders.customer_id
